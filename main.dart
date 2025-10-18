@@ -46,31 +46,39 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Center(
+        child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
               const Text('You have pushed the button this many times:'),
               Text(
                 '$_counter',
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
-          FloatingActionButton(onPressed: clear,
-            tooltip: 'Zero',
-            child: const Icon(Icons.exposure_zero),
-          ),
+        Padding( padding: const EdgeInsets.all(10)),
         FloatingActionButton(
           onPressed: _incrementCounter,
           tooltip: 'Increment',
           child: const Icon(Icons.add),
         ),
+          Padding( padding: const EdgeInsets.all(10)),
         FloatingActionButton(
           onPressed: _decrementCounter,
           tooltip: 'Increment',
           child: const Icon(Icons.exposure_minus_1),
         ),
+          Padding( padding: const EdgeInsets.all(10)),
+          FloatingActionButton(onPressed: clear,
+            tooltip: 'Zero',
+            child: const Icon(Icons.exposure_zero),
+          ),
       ],
     ),
+      ),
     );
+  }
+}
+
 
   }
 }
